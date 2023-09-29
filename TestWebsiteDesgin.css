@@ -1,83 +1,110 @@
-*{
+:root {
+  --color-primary: #0073ff;
+  --color-white: #e9e9e9;
+  --color-black: #141d28;
+  --color-black-1: #212b38;
+}
+
+* {
   margin: 0;
   padding: 0;
-  list-style: none;
-  text-decoration: none;
+  box-sizing: border-box;
 }
-body{
+
+body {
   font-family: sans-serif;
-  overflow: hidden;
-  user-select: none;
+ 
 }
-nav .logo{
-  color: white;
-  font-size: 33px;
-  font-weight: bold;
-  line-height: 70px;
-  padding-left: 110px;
+
+.logo {
+  color: var(--color-white);
+  font-size: 30px;
 }
-nav{
-  height: 70px;
-  background: #063247;
-  box-shadow: 0 3px 15px rgba(0,0,0,.4);
+
+.logo span {
+  color: var(--color-primary);
 }
-nav ul{
-  float: right;
-  margin-right: 30px;
+
+.menu-bar {
+  background-color: var(--color-black);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+
+  position: relative;
 }
-nav ul li{
-  display: inline-block;
+
+.menu-bar ul {
+  list-style: none;
+  display: flex;
 }
-nav ul li a{
-  color: white;
-  display: block;
-  padding: 0 15px;
-  line-height: 70px;
+
+.menu-bar ul li {
+  /* width: 120px; */
+  padding: 10px 30px;
+  /* text-align: center; */
+
+  position: relative;
+}
+
+.menu-bar ul li a {
   font-size: 20px;
-  background: #063247;
-  transition: .5s;
+  color: var(--color-white);
+  text-decoration: none;
+
+  transition: all 0.3s;
 }
-nav ul li a:hover,
-nav ul li a.active{
-  color: #23dbdb;
+
+.menu-bar ul li a:hover {
+  color: var(--color-primary);
 }
-nav ul ul{
+
+.fas {
+  float: right;
+  margin-left: 10px;
+  padding-top: 3px;
+}
+
+/* dropdown menu style */
+.dropdown-menu {
+  display: none;
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+  display: block;
   position: absolute;
-  top: 85px;
-  border-top: 3px solid #23dbdb;
-  opacity: 0;
-  visibility: hidden;
+  left: 0;
+  top: 100%;
+  background-color: var(--color-black);
 }
-nav ul li:hover > ul{
-  top: 70px;
-  opacity: 1;
-  visibility: visible;
-  transition: .3s linear;
+
+.menu-bar ul li:hover .dropdown-menu ul {
+  display: block;
+  margin: 10px;
 }
-nav ul ul li{
+
+.menu-bar ul li:hover .dropdown-menu ul li {
   width: 150px;
-  display: list-item;
-  position: relative;
-  border: 1px solid #042331;
-  border-top: none;
+  padding: 10px;
 }
-nav ul ul li a{
-  line-height: 50px;
+
+.dropdown-menu-1 {
+  display: none;
 }
-nav ul ul ul{
-  border-top: none;
-}
-nav ul ul ul li{
-  position: relative;
-  top: -70px;
+
+.dropdown-menu ul li:hover .dropdown-menu-1 {
+  display: block;
+  position: absolute;
   left: 150px;
+  top: 0;
+  background-color: var(--color-black);
 }
-nav ul ul li a i{
-  margin-left: 45px;
-}
-section{
-  background: url(bg.jpeg);
+
+.hero {
+  height: calc(100vh - 80px);
+  background-image: url(./bg.jpg);
   background-position: center;
-  background-size: cover;
-  height: 100vh;
 }
