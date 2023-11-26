@@ -1,16 +1,38 @@
-<head>
-  <title>Test Of HTML Coding</title>
-  <link rel = "stylesheet" type = "text/css" href="css/style.css">
-</head>
-<meta name="description" content="This is a Test Of Azurman's HTML Coding you might find some intresting stuff I shall say." />
+<!DOCTYPE html>
+<html>
 <body>
-<div class = "audio">
-<img src =  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyZfYe4dY7KL9Nrul2uzQ1DVOErjkNbnlGVySMhp27Jw&s" width = 150> 
-  <h1 title = "Whats the Word? Whats the haps? Whats your major ☝🤓 Mahwahhwa! Woah 🤯, Do you see shelby as a bookish nerd? You're a nerd.">werm says:</h1>
-  <h6 title = "how to start a video."> **PRESS THE PLAY BUTTON</h6>
-  <audio controls>
-     <source src="whatsyourmajor.mp3" type="audio/ogg">
-    </audio>
+
+<div class = "TimeIs">
+<h1 title = "Your Current Time (EXP.)" style = "font-size: 20px;" > Your Current Time Is: </h1>
 </div>
 
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@900&family=Jost&display=swap');
+
+.TimeIs {
+ text-align: center;
+}
+</style>
+
+<label id = "time">
+</label>
+
+<script>
+
+setInterval(myTimer, 1000);
+
+function myTimer() {
+  const d = new Date();
+  document.getElementById("time").innerHTML = d.toLocaleTimeString();
+time.style.fontWeight = "bold";
+document.getElementById("time").style.fontSize = "x-large";
+document.getElementById("time").style.fontFamily = "Jost";
+  time.style.textAlign = 'center';
+  
+}
+</script>
+
+
 </body>
+</html>
